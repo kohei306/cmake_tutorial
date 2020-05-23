@@ -1,0 +1,10 @@
+#include <iostream>
+#include "SomeLibraries/some_library_b.hpp"
+
+namespace SomeLibraries {
+
+void SomeLibraryB::Function() {
+  std::cout << "Hello from SomeLibraryA::Function()" << std::endl;
+}
+
+}
