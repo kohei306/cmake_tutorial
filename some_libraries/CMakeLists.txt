@@ -41,3 +41,10 @@ install(FILES
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfig.cmake
         DESTINATION "lib/cmake/SomeLibraries")
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfigVersion.cmake
+        VERSION ${PROJECT_VERSION}
+        COMPATIBILITY SameMajorVersion)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfigVersion.cmake 
+        DESTINATION "lib/cmake/SomeLibraries")

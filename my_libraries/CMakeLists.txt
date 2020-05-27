@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(MyLibraries VERSION 1.0 LANGUAGES CXX)
 
-find_package(SomeLibraries REQUIRED)
+find_package(SomeLibraries 1.0 REQUIRED)
 
 add_library(MyLibraryA src/my_library_a.cpp)
 
@@ -37,4 +37,11 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/MyLibraries/my_library_a.hpp
         DESTINATION "include/MyLibraries")
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfig.cmake
+        DESTINATION "lib/cmake/MyLibraries")
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfigVersion.cmake
+        VERSION ${PROJECT_VERSION}
+        COMPATIBILITY SameMajorVersion)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfigVersion.cmake 
         DESTINATION "lib/cmake/MyLibraries")
