@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SomeLibraries/some_library_b.hpp"
+#include "some_libraries/some_library_b.hpp"
 
 namespace SomeLibraries {
 

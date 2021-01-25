@@ -1,4 +1,4 @@
-#include "MyLibraries/my_library_a.hpp"
+#include "my_libraries/my_library_a.hpp"
 
 int main() {
   MyLibraries::MyLibraryA mla;

@@ -1,4 +1,4 @@
-#include "SomeLibraries/some_library_a.hpp"
+#include "some_libraries/some_library_a.hpp"
 
 namespace SomeLibraries {
 

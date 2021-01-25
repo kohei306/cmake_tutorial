@@ -33,8 +33,8 @@ install(EXPORT MyLibraries-export
     lib/cmake/MyLibraries
 )
 
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/MyLibraries/my_library_a.hpp
-        DESTINATION "include/MyLibraries")
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/my_libraries/my_library_a.hpp
+        DESTINATION "include/my_libraries")
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfig.cmake
         DESTINATION "lib/cmake/MyLibraries")
@@ -43,5 +43,5 @@ include(CMakePackageConfigHelpers)
 write_basic_package_version_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfigVersion.cmake
         VERSION ${PROJECT_VERSION}
         COMPATIBILITY SameMajorVersion)
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfigVersion.cmake 
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/MyLibrariesConfigVersion.cmake
         DESTINATION "lib/cmake/MyLibraries")

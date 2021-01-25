@@ -34,10 +34,10 @@ install(EXPORT SomeLibraries-export
 )
 
 install(FILES
-          ${CMAKE_CURRENT_SOURCE_DIR}/include/SomeLibraries/some_library_a.hpp
-          ${CMAKE_CURRENT_SOURCE_DIR}/include/SomeLibraries/some_library_b.hpp
+          ${CMAKE_CURRENT_SOURCE_DIR}/include/some_libraries/some_library_a.hpp
+          ${CMAKE_CURRENT_SOURCE_DIR}/include/some_libraries/some_library_b.hpp
         DESTINATION
-          "include/SomeLibraries")
+          "include/some_libraries")
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfig.cmake
         DESTINATION "lib/cmake/SomeLibraries")
@@ -46,5 +46,5 @@ include(CMakePackageConfigHelpers)
 write_basic_package_version_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfigVersion.cmake
         VERSION ${PROJECT_VERSION}
         COMPATIBILITY SameMajorVersion)
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfigVersion.cmake 
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/SomeLibrariesConfigVersion.cmake
         DESTINATION "lib/cmake/SomeLibraries")
